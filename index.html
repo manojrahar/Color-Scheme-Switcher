@@ -5,65 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Scheme Switcher</title>
-    <style>
-        .text {
-            padding: 30px;
-            font-size: 40px;
-            font-weight: bolder;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            text-align: center;
-            text-decoration: underline;
-            color: brown;
-        }
-
-        .boxes {
-            padding: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 50vw;
-            margin: auto;
-            flex-wrap: wrap;
-        }
-
-        .button {
-            height: 150px;
-            width: 150px;
-            border: 2px solid black;
-            border-radius: 20px;
-            margin:10px;
-        }
-        p {
-            padding: 20px;
-            text-align: center;
-            font-size: 33px;
-            font-weight: bold;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-        }
-        #lightblue {
-            background-color: lightblue;
-        }
-        #beige {
-            background-color: beige;
-        }
-        #palegreen {
-            background-color: palegreen;
-        }
-        #gray {
-            background-color: gray;
-        }
-        #coral {
-            background-color: coral;
-        }
-        @media (width < 450px) {
-            .button {
-            height: 60px;
-            width: 60px;
-            margin: 10px;
-        }
-
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -77,36 +19,6 @@
         </div>
         <p>Try clicking on one of the colors above to change the background color of this page.</p>
     </div>
-
-
-
-    <script>
-        const buttons = document.querySelectorAll('.button');
-        // console.log(buttons)
-        const body = document.querySelector("body")
-        // console.log(body)
-        buttons.forEach(function(button) {
-            console.log(button)
-            button.addEventListener('click', function(e) {
-                console.log(e)
-                console.log(e.target)
-                if(e.target.id == "lightblue"){
-                    document.body.style.backgroundColor = e.target.id
-                }
-                if(e.target.id == "beige"){
-                    document.body.style.backgroundColor = e.target.id
-                }
-                if(e.target.id == "palegreen"){
-                    document.body.style.backgroundColor = e.target.id
-                }
-                if(e.target.id == "gray"){
-                    document.body.style.backgroundColor = e.target.id
-                }
-                if(e.target.id == "coral"){
-                    document.body.style.backgroundColor = e.target.id
-                }
-            })
-        })
-    </script>
+<script src="script.js"></script>
 </body>
 </html>
